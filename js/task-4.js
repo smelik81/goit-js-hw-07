@@ -12,13 +12,12 @@ function handleForm(event) {
       email: elements.email.value.trim(),
       password: elements.password.value.trim(),
     };
-    const result = infoObj;
-    if ((email === "" && !email.includes('@'))|| password === "") {
+    if (email === "" || password === "") {
         alert("All form fields must be filled in");
     } else {
-        console.log(result);
+        console.log(infoObj);
+        event.target.reset();
     }
-    event.target.reset(); 
 };
 
 

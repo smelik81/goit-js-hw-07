@@ -29,7 +29,7 @@ const images = [
 ];
 
 const resGallery = document.querySelector(".gallery");
-const resultImage = images.forEach((item) => {
+images.forEach((item) => {
   const itemElement = document.createElement("li");
   const imegElement = document.createElement("img");
   imegElement.setAttribute("src", item.url);
@@ -37,20 +37,9 @@ const resultImage = images.forEach((item) => {
   imegElement.setAttribute("width", 360);
   imegElement.setAttribute("height", 300);
 
-  /* itemElement.style.display = "flex";
-  itemElement.style.flexWrap = "wrap";
-  itemElement.style.gap = "48px 24px"; */
-
   itemElement.append(imegElement);
   resGallery.append(itemElement);
 });
 
-const itemList = document
-  .querySelectorAll(".gallery > li")
-  .forEach((item, index) => {
-    if (index < 3) {
-      item.classList.add("gallery-list__first");
-    } else {
-      item.classList.add("gallery-list__second");
-    }
-  });
+
+  
