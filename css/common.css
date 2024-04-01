@@ -67,9 +67,8 @@ body {
     flex-wrap: wrap;
     gap: 48px 24px;
     list-style-type: none;
-    list-style-type: none;
-    justify-content: center;
-    padding: 100px 156px;
+    padding: 100px 50px;
+    margin: 0 auto;
 }
 
 /*----------TASK-3----------------*/

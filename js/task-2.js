@@ -28,18 +28,18 @@ const images = [
   },
 ];
 
-const resGallery = document.querySelector(".gallery");
-images.forEach((item) => {
-  const itemElement = document.createElement("li");
-  const imegElement = document.createElement("img");
-  imegElement.setAttribute("src", item.url);
-  imegElement.setAttribute("alt", item.alt);
-  imegElement.setAttribute("width", 360);
-  imegElement.setAttribute("height", 300);
 
-  itemElement.append(imegElement);
-  resGallery.append(itemElement);
-});
+// Дякую за пораду. Я с початку не зовсім зрозумів що значить додати за одну операцію. Але я вирішив phj,bnb по своєму
 
+const containerGallery = document.querySelector('.gallery');
+containerGallery.insertAdjacentHTML('beforeend', createMarkup(images));
 
-  
+function createMarkup(arr) {
+  return images
+    .map(item =>
+      `<li>
+        <img src="${item.url}" alt="${item.alt}" width="360" height="300">
+      </li>
+    `)
+};
+
